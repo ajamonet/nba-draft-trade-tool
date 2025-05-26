@@ -121,7 +121,7 @@ const TeamPanel: React.FC<TeamPanelProps> = ({ teamLabel }) => {
                   fontSize="small"
                   sx={{ color: highlightColor }}
                 />
-                <Typography>{pick}</Typography>
+                <Typography sx={{fontSize: '0.845em'}}>{pick}</Typography>
               </Stack>
             }
           />
