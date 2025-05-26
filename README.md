@@ -16,8 +16,8 @@ This app was built with:
 - Users can save and load trade scenarios within a modal
 - Long-term storage (localStorage) used to store saved trades
 
-### Install dependencies
-- npm install
+### Deployed Application 
+- [npm install](https://nba-draft-trade-tool.vercel.app/)
 
 ### `npm start`
 Runs the app in the development mode.\
