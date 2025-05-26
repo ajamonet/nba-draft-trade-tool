@@ -17,7 +17,7 @@ This app was built with:
 - Long-term storage (localStorage) used to store saved trades
 
 ### Deployed Application 
-- [npm install](https://nba-draft-trade-tool.vercel.app/)
+- [NBA Trade](https://nba-draft-trade-tool.vercel.app/)
 
 ### `npm start`
 Runs the app in the development mode.\
