@@ -18,17 +18,10 @@ import {
 import EmojiEventsIcon from "@mui/icons-material/EmojiEvents";
 import { useTradeStore } from "../store/tradeStore";
 import { nbaTeams } from "../data/nbaTeams";
-import { draftPickValues } from "../data/draftValues";
 
 type TeamPanelProps = {
   teamLabel: "A" | "B";
 };
-
-const mockTeams = [
-  "Los Angeles Lakers",
-  "Boston Celtics",
-  "Golden State Warriors",
-];
 const mockDraftPicks = [
   "2024 1st round pick",
   "2025 2nd round pick",
@@ -40,8 +33,6 @@ const mockDraftPicks = [
 ];
 
 const TeamPanel: React.FC<TeamPanelProps> = ({ teamLabel }) => {
-  const [selectedTeam, setSelectedTeam] = React.useState<string>(mockTeams[0]);
-  const [selectedPicks, setSelectedPicks] = React.useState<string[]>([]);
 
   const isA = teamLabel === "A";
   const team = useTradeStore((s) => (isA ? s.teamA : s.teamB));
@@ -52,13 +43,6 @@ const TeamPanel: React.FC<TeamPanelProps> = ({ teamLabel }) => {
   );
 
   const highlightColor = teamLabel === "A" ? "#8003fC" : "#FDB927";
-
-  const handlePickToggle = (pick: string) => {
-    setSelectedPicks((prev) =>
-      prev.includes(pick) ? prev.filter((p) => p !== pick) : [...prev, pick]
-    );
-  };
-
   return (
     <Paper sx={{ p: 3, borderRadius: 2 }} elevation={3}>
       <Typography
@@ -110,7 +94,7 @@ const TeamPanel: React.FC<TeamPanelProps> = ({ teamLabel }) => {
               pl: 1,
               pr: 1,
               borderRadius: 1,
-              fontSize: '0.84rem',
+              fontSize: '0.84em',
               "&:hover": {
                 backgroundColor: "action.hover",
               },
